@@ -1,0 +1,272 @@
+EESchema Schematic File Version 2
+LIBS:power
+LIBS:device
+LIBS:transistors
+LIBS:conn
+LIBS:linear
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:valves
+LIBS:BB_PowerSupply-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L LD1117V33 U1
+U 1 1 557E63DC
+P 5050 1850
+F 0 "U1" H 5050 1850 60  0000 C CNN
+F 1 "LD1117V50" H 5050 2050 60  0000 C CNN
+F 2 "Power_Integrations:TO-220" H 5050 1850 60  0001 C CNN
+F 3 "" H 5050 1850 60  0000 C CNN
+	1    5050 1850
+	-1   0    0    1   
+$EndComp
+$Comp
+L BARREL_JACK CON1
+U 1 1 557E6495
+P 3450 1950
+F 0 "CON1" H 3450 2200 60  0000 C CNN
+F 1 "BARREL_JACK" H 3450 1750 60  0000 C CNN
+F 2 "Connect:BARREL_JACK" H 3450 1950 60  0001 C CNN
+F 3 "" H 3450 1950 60  0000 C CNN
+	1    3450 1950
+	1    0    0    -1  
+$EndComp
+$Comp
+L CP C1
+U 1 1 557E6528
+P 4200 2000
+F 0 "C1" H 4000 2100 50  0000 L CNN
+F 1 "0.1uF" H 3950 1900 50  0000 L CNN
+F 2 "Capacitors_Elko_ThroughHole:Elko_vert_11x5mm_RM2.5" H 4238 1850 30  0001 C CNN
+F 3 "" H 4200 2000 60  0000 C CNN
+	1    4200 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L CP C2
+U 1 1 557E657C
+P 5750 1900
+F 0 "C2" H 5775 2000 50  0000 L CNN
+F 1 "10uF" H 5775 1800 50  0000 L CNN
+F 2 "Capacitors_Elko_ThroughHole:Elko_vert_11x5mm_RM2.5" H 5788 1750 30  0001 C CNN
+F 3 "" H 5750 1900 60  0000 C CNN
+	1    5750 1900
+	1    0    0    -1  
+$EndComp
+$Comp
+L R R1
+U 1 1 557E65DC
+P 6250 1750
+F 0 "R1" V 6350 1750 50  0000 C CNN
+F 1 "150" V 6250 1750 50  0000 C CNN
+F 2 "Resistors_SMD:R_1206_HandSoldering" V 6180 1750 30  0001 C CNN
+F 3 "" H 6250 1750 30  0000 C CNN
+	1    6250 1750
+	1    0    0    -1  
+$EndComp
+$Comp
+L LED D1
+U 1 1 557E6699
+P 6250 2150
+F 0 "D1" H 6250 2250 50  0000 C CNN
+F 1 "LED" H 6250 2050 50  0000 C CNN
+F 2 "LEDs:LED-1206" H 6250 2150 60  0001 C CNN
+F 3 "" H 6250 2150 60  0000 C CNN
+	1    6250 2150
+	0    -1   -1   0   
+$EndComp
+$Comp
+L +5V #PWR01
+U 1 1 557E674A
+P 2450 1600
+F 0 "#PWR01" H 2450 1450 50  0001 C CNN
+F 1 "+5V" H 2450 1740 50  0000 C CNN
+F 2 "" H 2450 1600 60  0000 C CNN
+F 3 "" H 2450 1600 60  0000 C CNN
+	1    2450 1600
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR02
+U 1 1 557E676A
+P 2450 2550
+F 0 "#PWR02" H 2450 2300 50  0001 C CNN
+F 1 "GND" H 2450 2400 50  0000 C CNN
+F 2 "" H 2450 2550 60  0000 C CNN
+F 3 "" H 2450 2550 60  0000 C CNN
+	1    2450 2550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3750 1600 3750 1850
+Connection ~ 4200 1850
+Wire Wire Line
+	5050 1700 5050 1600
+Wire Wire Line
+	5750 1350 5750 1750
+Connection ~ 5750 1600
+Wire Wire Line
+	4200 2550 4200 2150
+Wire Wire Line
+	5250 1850 5400 1850
+Wire Wire Line
+	3750 1850 4850 1850
+Wire Wire Line
+	6250 1900 6250 1950
+Wire Wire Line
+	5050 1600 6250 1600
+Wire Wire Line
+	5750 2550 5750 2050
+Wire Wire Line
+	3750 2550 3750 1950
+Connection ~ 3750 2050
+$Comp
+L TST TST1
+U 1 1 557E6EC8
+P 2750 1500
+F 0 "TST1" H 2750 1800 50  0000 C BNN
+F 1 "SRC TST" H 2750 1750 50  0000 C CNN
+F 2 "Measurement_Points:Measurement_Point_Square-SMD-Pad_Small" H 2750 1500 60  0001 C CNN
+F 3 "" H 2750 1500 60  0000 C CNN
+	1    2750 1500
+	1    0    0    -1  
+$EndComp
+$Comp
+L TST TST2
+U 1 1 557E6F49
+P 2750 2750
+F 0 "TST2" H 2750 3050 50  0000 C BNN
+F 1 "Gnd TST" H 2750 3000 50  0000 C CNN
+F 2 "Measurement_Points:Measurement_Point_Square-SMD-Pad_Small" H 2750 2750 60  0001 C CNN
+F 3 "" H 2750 2750 60  0000 C CNN
+	1    2750 2750
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2750 1500 2750 1600
+Connection ~ 2750 1600
+$Comp
+L CONN_01X02 P2
+U 1 1 557E735B
+P 6800 2000
+F 0 "P2" H 6800 2150 50  0000 C CNN
+F 1 "5.0V Out" V 6900 2000 50  0000 C CNN
+F 2 "Pin_Headers:Pin_Header_Straight_1x02" H 6800 2000 60  0001 C CNN
+F 3 "" H 6800 2000 60  0000 C CNN
+	1    6800 2000
+	1    0    0    -1  
+$EndComp
+$Comp
+L CONN_01X02 P1
+U 1 1 557E73E1
+P 4600 2150
+F 0 "P1" H 4600 2300 50  0000 C CNN
+F 1 "5V Out" H 4650 2000 50  0000 C CNN
+F 2 "Socket_Strips:Socket_Strip_Straight_1x02" H 4600 2150 60  0001 C CNN
+F 3 "" H 4600 2150 60  0000 C CNN
+	1    4600 2150
+	1    0    0    -1  
+$EndComp
+Connection ~ 3750 2550
+Connection ~ 4200 2550
+Connection ~ 5400 2550
+Wire Wire Line
+	6250 2550 6250 2350
+Connection ~ 5750 2550
+Wire Wire Line
+	6600 1950 6600 1350
+Wire Wire Line
+	6600 1350 5750 1350
+Wire Wire Line
+	6600 2550 6600 2050
+Connection ~ 6250 2550
+Wire Wire Line
+	5400 1850 5400 2550
+Wire Wire Line
+	4400 2100 4400 1850
+Connection ~ 4400 1850
+Wire Wire Line
+	4400 2550 4400 2200
+Connection ~ 4400 2550
+Connection ~ 2750 2550
+Wire Wire Line
+	2750 2550 2750 2750
+$Comp
+L TST TST3
+U 1 1 557E7EEB
+P 6700 1600
+F 0 "TST3" H 6700 1900 50  0000 C BNN
+F 1 "5.0V TST" H 6700 1850 50  0000 C CNN
+F 2 "Measurement_Points:Measurement_Point_Square-SMD-Pad_Small" H 6700 1600 60  0001 C CNN
+F 3 "" H 6700 1600 60  0000 C CNN
+	1    6700 1600
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	6700 1600 6600 1600
+Connection ~ 6600 1600
+$Comp
+L PWR_FLAG #FLG03
+U 1 1 557E8085
+P 2150 1600
+F 0 "#FLG03" H 2150 1695 50  0001 C CNN
+F 1 "PWR_FLAG" H 2150 1780 50  0000 C CNN
+F 2 "" H 2150 1600 60  0000 C CNN
+F 3 "" H 2150 1600 60  0000 C CNN
+	1    2150 1600
+	1    0    0    -1  
+$EndComp
+Connection ~ 2450 1600
+Wire Wire Line
+	2150 1600 2550 1600
+Wire Wire Line
+	2450 1600 3750 1600
+$Comp
+L PWR_FLAG #FLG04
+U 1 1 557E822D
+P 2150 2550
+F 0 "#FLG04" H 2150 2645 50  0001 C CNN
+F 1 "PWR_FLAG" H 2150 2730 50  0000 C CNN
+F 2 "" H 2150 2550 60  0000 C CNN
+F 3 "" H 2150 2550 60  0000 C CNN
+	1    2150 2550
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	2150 2550 6600 2550
+Connection ~ 2450 2550
+$EndSCHEMATC
